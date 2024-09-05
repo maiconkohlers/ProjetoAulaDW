@@ -1,134 +1,133 @@
 <!DOCTYPE html>
-
 <html lang="Pt-br">
-
-<head> 
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formularios</title>
-
+    <title>Formulários</title>
 </head>
-
 <body>
     
     <form action="/login" method="post">
 
-        <fieldset> 
+       <fieldset>
 
-            <legend>Contato</legend>
-            <label for="nome">Nome: </label><br>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required><br>
-
-            <!-- value="@gmail.com" = fixa -->
-            <label for="email">Email: </label><br>
-            <input type="email" id="email" name="Email" placeholder="Digite seu email" required><br>
-
-            <label for="senha">Senha: </label><br>
-            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" maxlength="8" required><br>
-            
-            <label for="Data">Data:</label><br>
-            <input type="date" name="Data" id="Data">
-
-            <hr>
-            <div>
-
-                <input type="radio" id="Masculino" name="genero">
-                <label for="genero">Masculino</label>
-                <br>
-
-                <input type="radio" id="Feminino" name="genero">
-                <label for="genero">Feminino</label>
-                <br>
-
-                <input type="radio" id="Não quero informar" name="genero">
-                <label for="genero">Não quero informar</label><br><br>
-
-            </div>
-            <hr>
-        <div>
-            <h4>Lista de Compras!</h2>    
-            <input type="checkbox" name="Feijao" id="Feijao">
-            <label for="Feijao">Feijao</label>
+        <legend>Tela De Inscriçao</legend>
+        <label for="name">Nome: </label>
+        <br>
+        <input type="text" name="name" id="name" placeholder="insira seu Nome" required>
             <br>
 
-            <input type="checkbox" name="Batata" id="Batata">
-            <label for="Batata"> Batata</label>
+        <label for="email">Email: </label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="insira seu email" required>
             <br>
 
-            <input type="checkbox" name="Atum" id="Atum">
-            <label for="Atum">Atum</label>
+        <label for="Senha">Senha: </label>
+            <br>
+        <input type="password" name="senha" id="senha" maxlength="16" placeholder="Insira sua senha" required>
             <br>
 
-            <input type="checkbox" name="Arroz" id="Arroz">
-            <label for="Arroz">Arroz</label>
-            <br>
+        <label for="Senha">Repetir Senha: </label>
+        <br>
+        <input type="password" name="senha" id="senha" maxlength="16" placeholder="Insira sua senha novamente" required>
+    <hr>
 
-            <input type="checkbox" name="3kg Bife" id="3kg Bife">
-            <label for="3kg Bife">3kg Bife</label>
+        <p>Nascimento / Genero</p>
+        <input type="date" name="nascimento" id="nascimento" required>
+        
+        <input type="radio" name="Genero" id="Masculino" value="Masculino" required>
+        <label for="Masculino">Masculino</label>
 
-        </div>
+        <input type="radio" name="Genero" id="Feminino" value="Feminino">
+        <label for="Feminino">Feminino</label>
 
-    <div>
-        <h4>Selecione Seu Estado</h4>
+        <input type="radio" name="Genero" id="Outro" value="Outro">
+        <label for="Outro">Outro</label> 
 
-        <select name="Estados" id="Estados">
+    <hr>
+
+        <p>Estado em que se Localiza</p>
+
+        <select name="estado" id="estado" required>
 
             <optgroup label="Sul">
 
-            <option value="SC">Santa Catarina</option>
-            <option value="RS">Rio Grande Do Sul</option>
-            <option value="PR" selected>Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="PR">Paraná</option>
+                <option value="RS">Rio Grande Do Sul </option>
 
             </optgroup>
 
             <optgroup label="Sudeste">
 
-            <option value="ES" selected>Espirito Santo</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="RJ">Rio De Janeiro</option>
-            <option value="SP">São Paulo</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio De Janeiro</option>
+                <option value="MS">Minas Gerais</option>
+                <option value="ES">Espirito Santo</option>
 
             </optgroup>
 
             <optgroup label="Nordeste">
 
-                <option value="BH" selected>Bahia</option>
-                <option value="MR">Maranhão</option>
-                <option value="PI">Píai</option>
+                <option value="AL">Alagoas</option>
+                <option value="BH">Bajia</option>
                 <option value="CE">Ceará</option>
-    
+                <option value="MA">Maranhão</option>
+                <option value="PB">Paraíba</option>
+                <option value="PN">Pernanbuco</option>
+                <option value="PN">Píaui</option>
+                <option value="RN">Rio Grande Do Norte</option>
+                <option value="SE">Sergipe</option>
+
+            </optgroup>
+
+            <optgroup label="Centro-Oeste">
+
+                <option value="DF">Distrito Federal</option>
+                <option value="MT">Mato grosso</option>
+                <option value="MS">Mato grosso do Sul</option>
+                <option value="GO">Goiás</option>
+                
             </optgroup>
 
         </select>
         <hr>
 
-        <label for="feedback">feedback</label>
-        <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
-
-    </div>
+        <p>Certidao de nascimento</p>
+        <input type="file" name="Certidao de nascimento" id="Certidao de nascimento" required>
+            <br><br><br>
     <hr>
 
-    <input list="browsers">
+        <input type="checkbox" name="Termos" id="Aceito" required>
+        <label for="Aceitação dos termos do site">Ao marcar a caixa, você concorda em receber notícias,
+            informações sobre eventos e ofertas especiais por e-mail
+            deste site, suas afiliadas listadas
+            aqui, e sobre produtos e
+            serviços de terceiros. Você pode cancelar a assinatura usando o
+            link de cancelamento de assinatura fornecido no e-mail da
+            Blizzard Entertainment ou sua afiliada. Você pode
+            também usar as informações nas políticas de privacidade
+            para cancelar a assinatura..</label>
+            <br><br>
 
-        <datalist id="browsers">
+        <input type="checkbox" name="termos" id="Aceito02" required>
+        <label for="Aceitaçao dos termos">Ao marcar esta caixa, você reconhece que
+            leu e entendeu a POLÍTICA do SITE</label>    
 
-            <option value="Chrome">Chrome</option>    
-            <option value="FireFox">FireFox</option>
-            <option value="OperaGX">OperaGX</option>    
+    <hr>
 
-        </datalist>
-<hr>
+        <input type="submit">
+        <input type="reset">
 
-    <label for="Foto">Foto</label><br>
-    <input type="file" id="Foto" name="Foto" required><br><br>
-    <input type="submit">  
-    <input type="reset">
-
-        </fieldset>
+       </fieldset> 
 
     </form>
-    
-</body>
 
+        <br>
+    <a href="FeedBack.html">Deixe Seu FeedBack</a>
+
+    <a href="MaterialDeApoio.html">Material De Apoio</a>
+
+
+</body>
 </html>
